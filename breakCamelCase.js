@@ -1,5 +1,14 @@
 function solution(string) {
-  return "";
+  let newCharArray = [];
+  string.split("").map((char) => {
+    if (char.toUpperCase() === char) {
+      newCharArray.push(" ");
+      newCharArray.push(char);
+    } else {
+      newCharArray.push(char);
+    }
+  });
+  return newCharArray.join("");
 }
 
 console.log(solution("")); // ""
